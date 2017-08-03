@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="maEugeniAppV1.Views.LoginPage">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label  x:Name="Lbl_usuario" Text="Usuario" />
+            <Entry x:Name="entry_usuario" Placeholder="Usuario"></Entry>
+            <Label x:Name="Lbl_password" Text="Password"></Label>
+            <Entry x:Name="Entry_password" Placeholder="Password" IsPassword="True"></Entry>
+            <Button x:Name="Button_login" Text="Ingresar" Clicked="Button_login_Clicked" ></Button>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

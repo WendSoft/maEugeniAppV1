@@ -19,5 +19,16 @@ namespace maEugeniAppV1.Models
             this.Password = Password;
         }
 
+        public bool CheckUserInformation()
+        {
+            if (this.Username.Equals("") && this.Password.Equals(""))
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
     }
 }

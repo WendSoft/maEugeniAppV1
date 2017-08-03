@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-
+using maEugeniAppV1.Views;
 using Xamarin.Forms;
 
 namespace maEugeniAppV1
@@ -13,7 +13,8 @@ namespace maEugeniAppV1
         {
             InitializeComponent();
 
-            MainPage = new maEugeniAppV1.MainPage();
+            //MainPage = new maEugeniAppV1.MainPage();
+            MainPage = new LoginPage();
         }
 
         protected override void OnStart()
