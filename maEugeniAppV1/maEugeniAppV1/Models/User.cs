@@ -23,11 +23,11 @@ namespace maEugeniAppV1.Models
         {
             if (this.Username.Equals("") && this.Password.Equals(""))
             {
-                return true;
+                return false;
             }
             else
             {
-                return false;
+                return true;
             }
         }
     }

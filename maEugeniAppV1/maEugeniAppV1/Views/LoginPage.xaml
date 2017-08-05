@@ -3,12 +3,27 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="maEugeniAppV1.Views.LoginPage">
     <ContentPage.Content>
-        <StackLayout>
-            <Label  x:Name="Lbl_usuario" Text="Usuario" />
-            <Entry x:Name="entry_usuario" Placeholder="Usuario"></Entry>
-            <Label x:Name="Lbl_password" Text="Password"></Label>
-            <Entry x:Name="Entry_password" Placeholder="Password" IsPassword="True"></Entry>
-            <Button x:Name="Button_login" Text="Ingresar" Clicked="Button_login_Clicked" ></Button>
+        <StackLayout x:Name="MasterLayout">
+            <StackLayout x:Name="LogoStack" VerticalOptions="FillAndExpand">
+                <Image x:Name="LoinIncon" Source="LoginIcon.png" Margin="0,80,0,0"></Image>
+            </StackLayout>
+            <StackLayout x:Name="LoginEntriesStack" VerticalOptions="StartAndExpand">
+                <StackLayout.Padding>
+                    <OnIdiom x:Typearguments="Thickness">
+                        <OnIdiom.Phone>40,0,40,0</OnIdiom.Phone>
+                        <OnIdiom.Tablet>40,0,40,0</OnIdiom.Tablet>
+                    </OnIdiom>
+                </StackLayout.Padding>
+
+                <ActivityIndicator x:Name="ActivitySpinner" Color="Gray" IsRunning="True"></ActivityIndicator>
+
+                <Label  x:Name="Lbl_usuario" Text="Usuario" />
+                <Entry x:Name="entry_usuario" Placeholder="Usuario"></Entry>
+                <Label x:Name="Lbl_password" Text="Password"></Label>
+                <Entry x:Name="Entry_password" Placeholder="Password" IsPassword="True"></Entry>
+                <Button x:Name="Button_login" Text="Ingresar" Clicked="Button_login_Clicked" ></Button>
+            </StackLayout>
         </StackLayout>
+
     </ContentPage.Content>
 </ContentPage>

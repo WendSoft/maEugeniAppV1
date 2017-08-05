@@ -27,7 +27,7 @@ namespace maEugeniAppV1.Views
             }
             else
             {
-                DisplayAlert("Login", "Login Incorrecto ", "ok");
+                DisplayAlert("Login", "Login Incorrecto", "ok");
             }
         }
     }
