@@ -5,13 +5,13 @@
     <ContentPage.Content>
         <StackLayout x:Name="MasterLayout">
             <StackLayout x:Name="LogoStack" VerticalOptions="FillAndExpand">
-                <Image x:Name="LoinIncon" Source="LoginIcon.png" Margin="0,80,0,0"></Image>
+                <Image x:Name="LoginIncon" Source="LoginIcon.ico" Margin="0,80,0,0"></Image>
             </StackLayout>
             <StackLayout x:Name="LoginEntriesStack" VerticalOptions="StartAndExpand">
                 <StackLayout.Padding>
-                    <OnIdiom x:Typearguments="Thickness">
+                    <OnIdiom x:TypeArguments="Thickness">
                         <OnIdiom.Phone>40,0,40,0</OnIdiom.Phone>
-                        <OnIdiom.Tablet>40,0,40,0</OnIdiom.Tablet>
+                        <OnIdiom.Tablet>140,150,140,0</OnIdiom.Tablet>
                     </OnIdiom>
                 </StackLayout.Padding>
 

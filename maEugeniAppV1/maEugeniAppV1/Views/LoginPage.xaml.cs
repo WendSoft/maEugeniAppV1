@@ -15,6 +15,19 @@ namespace maEugeniAppV1.Views
         public LoginPage()
         {
             InitializeComponent();
+            Init();
+        }
+
+        void Init()
+        {
+            BackgroundColor = Constants.BackgroundColor;
+            Lbl_usuario.TextColor = Constants.MainTextColor;
+            Lbl_password.TextColor = Constants.MainTextColor;
+            ActivitySpinner.IsVisible = false;
+            LoginIncon.HeightRequest = Constants.LoginIConHeight;
+
+            entry_usuario.Completed += (s, e) => Entry_password.Focus();
+            Entry_password.Completed += (s, e) => Button_login_Clicked(s, e);
         }
 
         private void Button_login_Clicked(object sender, EventArgs e)
@@ -24,6 +37,7 @@ namespace maEugeniAppV1.Views
             if (user.CheckUserInformation())
             {
                 DisplayAlert("Login", "Login Correcto", "ok");
+                App.UserDatabase.SaveUser(user);
             }
             else
             {
