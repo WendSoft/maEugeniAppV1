@@ -16,5 +16,9 @@ namespace maEugeniAppV1.Models
 
 
         public static int LoginIConHeight = 60;
+
+        //***********Login constants
+        public static string LoginUrl = "http://test.com/api/Auth/Login";
+        public static string NoInternetText = "Verifique conexión a internet";
     }
 }
